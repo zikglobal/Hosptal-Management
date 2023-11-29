@@ -1,5 +1,5 @@
 ﻿@using cloudscribe.Pagination.Models;
-@model PagedResult<Hospital.ViewModels.RoomViewModel>
+@model PagedResult<Hospital.ViewModels.ContactViewModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -17,16 +17,13 @@
                 Id
             </th>
             <th>
-                Room Number
+                Email
             </th>
             <th>
-               Room Type
+               Phone No
             </th>
             <th>
-                Status
-            </th>
-            <th>
-                HospitalInfoId
+                hospital
             </th>
             <th></th>
         </tr>
@@ -38,16 +35,13 @@
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RoomNumber)
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Type)
+                @Html.DisplayFor(modelItem => item.Phone)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HospitalInfo.Name)
+                @Html.DisplayFor(modelItem => item.HospitalInfoId)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
